@@ -3,13 +3,15 @@ package com.aluracursos.audiomatch.modelos;
 public class Audio {
     private String titulo;
 
-    private int duracion;
+    private double duracion;
 
-    private int totalReproducciones;
+    private int totalDeReproducciones;
 
-    private int meGusta;
+    private int totalDeMeGusta;
 
     private int clasificacion;
+
+    private String genero;
 
 
     public String getTitulo() {
@@ -20,28 +22,28 @@ public class Audio {
         this.titulo = titulo;
     }
 
-    public int getDuracion() {
+    public double getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
+    public void setDuracion(double duracion) {
         this.duracion = duracion;
     }
 
-    public int getTotalReproducciones() {
-        return totalReproducciones;
+    public int getTotalDeReproducciones() {
+        return totalDeReproducciones;
     }
 
-    public void setTotalReproducciones(int totalReproducciones) {
-        this.totalReproducciones = totalReproducciones;
+    public void setTotalDeReproducciones(int totalDeReproducciones) {
+        this.totalDeReproducciones = totalDeReproducciones;
     }
 
-    public int getMeGusta() {
-        return meGusta;
+    public int getTotalDeMeGusta() {
+        return totalDeMeGusta;
     }
 
-    public void setMeGusta(int meGusta) {
-        this.meGusta = meGusta;
+    public void setTotalDeMeGusta(int totalDeMeGusta) {
+        this.totalDeMeGusta = totalDeMeGusta;
     }
 
     public int getClasificacion() {
@@ -52,11 +54,12 @@ public class Audio {
         this.clasificacion = clasificacion;
     }
 
-    void meGusta() {
-
+    public void meGusta() {
+        this.totalDeMeGusta++;
     }
 
-    void reproducir() {
-
+    public void reproduce() {
+        this.totalDeReproducciones++;
     }
+
 }
